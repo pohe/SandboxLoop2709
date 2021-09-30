@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.AccessControl;
 
 namespace Sandbox
 {
@@ -59,22 +60,77 @@ namespace Sandbox
             //    Console.WriteLine();
             //}
 
-            int j = 1;
-            while ( j <= 10)
+            //int j = 1;
+            //while ( j <= 10)
+            //{
+            //    int i = 1;
+            //    while ( i <= 10 )
+            //    {
+            //        if (i * j < 10)
+            //            Console.Write("   " + i * j);
+            //        else if (i * j < 100)
+            //            Console.Write("  " + i * j);
+            //        else
+            //            Console.Write(" " + i * j);
+            //        i++;
+            //    }
+            //    Console.WriteLine();
+            //    j++;
+            //}
+
+            //int c1 = 1;
+            //while ( c1 <21 )
+            //{
+            //    //udskriv
+            //    Console.WriteLine(c1);
+            //    //ændre på variablen/condition
+            //    c1 = c1 + 1;
+            //}
+
+            //int c1 = 20;
+            //while (c1 > 0)
+            //{
+            //    //udskriv
+            //    Console.WriteLine(c1);
+            //    //ændre på variablen/condition
+            //    c1 = c1 - 1;
+            //}
+
+            //for(int c1 = 20; c1 > 0; c1--)
+            //{
+            //    Console.WriteLine(c1);
+            //}
+
+            //for (int i = 0; i < 10; i++ )
+            //{
+            //    for (int j = 0; j < 10; j++)
+            //    {
+            //        if (j<i)
+            //            Console.Write(" ");
+            //        else
+            //        {
+            //            Console.Write("*");
+            //        }
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            const int Height = 10;
+            const int Width = 10;
+            int iteration = 0;
+
+            while (iteration < Height + 1)
             {
-                int i = 1;
-                while ( i <= 10 )
+                for (int spaces = iteration; spaces > 0; spaces--)
                 {
-                    if (i * j < 10)
-                        Console.Write("   " + i * j);
-                    else if (i * j < 100)
-                        Console.Write("  " + i * j);
-                    else
-                        Console.Write(" " + i * j);
-                    i++;
+                    Console.Write(" ");
                 }
-                Console.WriteLine();
-                j++;
+                for (int w = (Width - iteration); w > 0; w--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine(" ");
+                iteration++;
             }
 
 
